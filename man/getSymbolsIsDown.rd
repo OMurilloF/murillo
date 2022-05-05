@@ -11,6 +11,7 @@ getSymbolsIsDown(ticker)
   \item{toDate}{To date in "Year-Month-Day" format, defaults to today's date.}
   \item{interval}{Accepts the following: daily, weekly, or monthly. It can be written all uppercase, all lowercase, or only title case. Defaults to daily.}
   \item{Events}{Accepts the following: historical (for Historical Prices), dividends (for Dividends Only), splits (for Stock Splits), and capital (for Capital Gain). It can be written all uppercase, all lowercase, or only title case. Defaults to historical}
+  \item{specificName}{Boolean. Defaults to false. If true, returns the requested information in an XTS object with the format "Ticker_Interval_Events"}
 }
 \description{
 The function downloads Yahoo! Finance company historical data. It supports historical prices, dividends only, stock splits and capital gain.
@@ -26,6 +27,6 @@ myList<-c("BABA", "MSFT", "AAPL")
 getSymbolsIsDown(myList)
 getSymbolsIsDown(myList, , , ,"dividends")
 getSymbolsIsDown(myList, , , ,"splits")
-getSymbolsIsDown(myList, , , ,"capital")
+getSymbolsIsDown(myList, , , ,"capital", "True")
 }
 ```
