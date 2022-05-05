@@ -20,12 +20,12 @@ The only required argument is the tickerList. The rest of the arguments defaults
 \examples{
 getSymbolsIsDown("MSFT")
 
-getSymbolsIsDown("MSFT", "2021-01-01", "2022-01-01", daily, historical)
+getSymbolsIsDown("MSFT", "2021-01-01", "2022-01-01", "daily", "historical")
 
 myList<-c("BABA", "MSFT", "AAPL")
 getSymbolsIsDown(myList)
-getSymbolsIsDown(myList, , , ,dividends)
-getSymbolsIsDown(myList, , , ,splits)
-getSymbolsIsDown(myList, , , ,capital)
+getSymbolsIsDown(myList, , , ,"dividends")
+getSymbolsIsDown(myList, , , ,"splits")
+getSymbolsIsDown(myList, , , ,"capital")
 }
 ```
