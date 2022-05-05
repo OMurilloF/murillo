@@ -31,7 +31,7 @@ getSymbolsIsDown <- function(tickerList,fromDate="1970-01-01",toDate=Sys.Date(),
       stop("No event set. Please input either Historical, Dividends, Splits or Capital parameter.")
     }
 
-    if (specificName=="False" | specificName=="false" | specificName=="FALSE") {
+    if (specificName=="False" | specificName=="false" | specificName=="FALSE" | specificName==FALSE) {
 
       for (i in tickerList) {
         myURL <- paste0("https://query1.finance.yahoo.com/v7/finance/download/",i,"?period1=",fromDate,"&period2=",toDate,"&interval=",interval,"&events=",events,"&includeAdjustedClose=true")
@@ -44,7 +44,7 @@ getSymbolsIsDown <- function(tickerList,fromDate="1970-01-01",toDate=Sys.Date(),
         assign(i, X_Manual, envir = .GlobalEnv)
       }
 
-    } else if (specificName=="True" | specificName=="true" | specificName=="TRUE") {
+    } else if (specificName=="True" | specificName=="true" | specificName=="TRUE" | specificName==TRUE) {
 
       for (i in tickerList) {
         myURL <- paste0("https://query1.finance.yahoo.com/v7/finance/download/",i,"?period1=",fromDate,"&period2=",toDate,"&interval=",interval,"&events=",events,"&includeAdjustedClose=true")
