@@ -1,7 +1,7 @@
 Package: murillo
 Type: Package
 Title: Download Yahoo! Finance Historical Data To R
-Version: 0.1.0
+Version: 0.9.0
 Author: Omar Murillo
 Maintainer: Omar Murillo <A00829017@tec.mx>
 Description: Personal R functions package that I use. At the moment the package includes two functions, one that works as a debugging tool to clear your workspace except the objects you tell it to keep. And its main function: getSymbolsIsDown. As its name implies, very useful for when the getSymbols function is not working. This function allows you to download Yahoo! Finance Historical Data directly for working in an XTS object within R. For more information on the uses of each funtion, refer to its included function documentation. 
